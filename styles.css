@@ -1,0 +1,234 @@
+/* Встановлюємо загальний стиль для body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Стиль для заголовка */
+header {
+  background-color: #5DADE2; /* Більш насичений блакитний колір */
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 0.5em 0 0;
+  font-style: italic; /* Курсив */
+}
+
+/* Стиль для секцій */
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Заголовки секцій */
+section h2 {
+  color: #FFD700; /* Більш насичений жовтий колір */
+  margin-top: 0;
+}
+
+/* Виділений текст */
+.highlight {
+  background-color: #FFD700; /* Більш насичений жовтий колір */
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Стиль для послуг */
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service h3 {
+  color: #5DADE2; /* Більш насичений блакитний колір */
+}
+
+.price {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Кнопка для донату */
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFD700; /* Жовтий колір */
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px; /* Відступ зверху */
+}
+
+.donate-button:hover {
+  background-color: #FFC300; /* Трохи темніший жовтий */
+}
+
+/* Стилі для посилань */
+a {
+  color: #5DADE2; /* Більш насичений блакитний колір */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Додаткові стилі для контактів */
+section:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* Елементи, що падають */
+.falling-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.element {
+  position: absolute;
+  top: -10%;
+  font-size: 1.5em; /* Зменшено розмір */
+  opacity: 0.8;
+  color: transparent; /* Колір контуру */
+  -webkit-text-stroke: 1px #FFD700; /* Колір обведення */
+  animation: fall linear infinite;
+}
+
+.element:nth-child(1) {
+  left: 10%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.element:nth-child(2) {
+  left: 20%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.element:nth-child(3) {
+  left: 30%;
+  animation-duration: 15s;
+  animation-delay: 4s;
+}
+
+.element:nth-child(4) {
+  left: 40%;
+  animation-duration: 10s;
+  animation-delay: 6s;
+}
+
+.element:nth-child(5) {
+  left: 50%;
+  animation-duration: 12s;
+  animation-delay: 8s;
+}
+
+.element:nth-child(6) {
+  left: 60%;
+  animation-duration: 15s;
+  animation-delay: 10s;
+}
+
+.element:nth-child(7) {
+  left: 70%;
+  animation-duration: 10s;
+  animation-delay: 12s;
+}
+
+.element:nth-child(8) {
+  left: 80%;
+  animation-duration: 12s;
+  animation-delay: 14s;
+}
+
+.element:nth-child(9) {
+  left: 90%;
+  animation-duration: 15s;
+  animation-delay: 16s;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .service-content {
+    width: 100%;
+  }
+}
